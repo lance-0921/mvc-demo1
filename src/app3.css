@@ -1,0 +1,21 @@
+#app3 {
+  border: 1px solid red;
+  width: 50vw;
+  height: 50vw;
+  position: relative;
+}
+#app3 .rec {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+  transition: transform 1s;
+}
+/* 添加class将JS的点击事件与过渡动画联系在一起 */
+#app3 .rec.active {
+  transform: translateX(25vw);
+  border-radius: 50%;
+  background-color: red;
+}

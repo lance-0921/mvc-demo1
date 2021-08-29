@@ -1,0 +1,29 @@
+#app4 {
+  position: relative;
+}
+#app4 .trans {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  margin-left: -100px;
+  border: 1px solid grey;
+  background-color: rgba(255, 0, 0);
+}
+
+@keyframes change {
+  0% {
+    background: rgba(255, 0, 0);
+  }
+  33% {
+    background: rgba(255, 255, 255);
+  }
+  100% {
+    background: rgba(255, 255, 0);
+  }
+}
+#app4 .trans.active {
+  animation: change linear infinite alternate 2s;
+}

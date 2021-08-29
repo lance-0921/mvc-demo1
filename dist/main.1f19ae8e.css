@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+* ::after,
+* ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+body {
+  overflow: hidden;
+}
+#page {
+  display: flex;
+  flex-wrap: wrap;
+}
+#page > section {
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid grey;
+}
+
+#app1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#app1 > * {
+  margin-bottom: 20px;
+}
+
+#number {
+  display: flex;
+  justify-content: center;
+}
+#buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#app2 {
+  padding: 12vw;
+}
+#app2 > .tab-bar {
+  display: flex;
+}
+
+#app2 .tab-bar > li {
+  border: 1px solid grey;
+  width: 50%;
+}
+#app2 .tab-bar > li.selected {
+  background: rgb(253, 221, 155);
+  color: white;
+}
+#app2 .tab-content > li {
+  display: none;
+}
+#app2 .tab-content > li.active {
+  display: block;
+}
+
+#app3 {
+  border: 1px solid red;
+  width: 50vw;
+  height: 50vw;
+  position: relative;
+}
+#app3 .rec {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+  transition: transform 1s;
+}
+/* 添加class将JS的点击事件与过渡动画联系在一起 */
+#app3 .rec.active {
+  transform: translateX(25vw);
+  border-radius: 50%;
+  background-color: red;
+}
+
+#app4 {
+  position: relative;
+}
+#app4 .trans {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  margin-left: -100px;
+  border: 1px solid grey;
+  background-color: rgba(255, 0, 0);
+}
+
+@keyframes change {
+  0% {
+    background: rgba(255, 0, 0);
+  }
+  33% {
+    background: rgba(255, 255, 255);
+  }
+  100% {
+    background: rgba(255, 255, 0);
+  }
+}
+#app4 .trans.active {
+  animation: change linear infinite alternate 2s;
+}
+
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
